@@ -71,7 +71,7 @@ cat(paste0("<style>",
 ```
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,comment=NA)
 ```
 
 
@@ -92,19 +92,20 @@ Although the INSITE server is rsync-compatible, by default the rsync functionali
 To send a file from a local computer to a remote one, the following syntax is appropriate:
 
 ```{r rsync-syntax, include=TRUE,echo=FALSE}
-noquote("rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]")
+cat(paste("rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]"))
 ```
 
 In our case, the remote folder to which we will be sending our files is the INSITE server, so we can replace *[pathToRemoteFolder]* with *[Username]@[ServerIPAddress]::[folder]*. The server IP address is 169.236.184.28, and our shared folder for INSITE data is insiteData/data/... . Your username is specific to you. The rsync syntax may then look like:
 
-```{r rsync-syntax2, include=TRUE,echo=FALSE}
-noquote("rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/")
+```{r rsync-syntax2,include=TRUE,echo=FALSE}
+cat(paste("rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
+
 ```
 
 If you're performing your rsync from within the folder in which reside the data you intend to send, then you simply need to replace *[pathToLocalFile]* with the name of your file. If you are performing rsync from a distinct folder, you need to input the path from the folder you're currently in to the location of your file. For the sake of simplicity, let's assume we're sending from the folder in which our data reside, and the name of our genomic leafhopper data file is Hoffman_09272024_3.fastq. In that case, you may perform the following command, omitting for now the [optionalFlags]: 
 
 ```{r rsync-syntax3, include=TRUE,echo=FALSE}
-noquote("rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/")
+cat(paste("rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
 ```
 
 Your terminal should then request your password. Note that the password it requires is not your regular sign-in password for the server, but the particular rsync password mentioned above that will be provided to you by Nick Hoffman.
@@ -124,7 +125,7 @@ Here are some flags we recommend using in your rsync command.
 This could look as follows:
 
 ```{r rsync-syntax6, include=TRUE,echo=FALSE}
-noquote("rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/")
+cat(paste("rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
 ```
 
 You are of course encouraged to explore other flags linked above.
@@ -134,14 +135,14 @@ You are of course encouraged to explore other flags linked above.
 If you're on Windows, rsync won't be native to your operating system. However, you can download rsync through <a href="https://www.cygwin.com/install.html" target="_blank">the Cygwin Project</a>. Please follow the guide there in order to download rsync, and reach out to Nick Hoffman if you have any problem with it. If you're not sure whether rsync downloaded properly onto your Windows system, you can run the following command in <b>Cygwin Terminal</b>:
 
 ```{r rsync-syntax4, include=TRUE,echo=FALSE}
-noquote("rsync --version")
+cat(paste("rsync --version"))
 ```
 
 If rsync installed correctly, you should should see an output like:
 
 
 ```{r rsync-5, include=TRUE,echo=FALSE}
-noquote("rsync  version x.x.x  protocol version xxx")
+cat(paste("rsync  version x.x.x  protocol version xxx"))
 ```
 
 

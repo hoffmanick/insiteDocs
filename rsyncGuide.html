@@ -2820,14 +2820,14 @@ rsync password which you will need in the course of sending data through
 rsync to the server.</p>
 <p>To send a file from a local computer to a remote one, the following
 syntax is appropriate:</p>
-<pre><code>## [1] rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]</code></pre>
+<pre><code>rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]</code></pre>
 <p>In our case, the remote folder to which we will be sending our files
 is the INSITE server, so we can replace <em>[pathToRemoteFolder]</em>
 with <em>[Username]@[ServerIPAddress]::[folder]</em>. The server IP
 address is 169.236.184.28, and our shared folder for INSITE data is
 insiteData/data/… . Your username is specific to you. The rsync syntax
 may then look like:</p>
-<pre><code>## [1] rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+<pre><code>rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
 <p>If you’re performing your rsync from within the folder in which
 reside the data you intend to send, then you simply need to replace
 <em>[pathToLocalFile]</em> with the name of your file. If you are
@@ -2837,7 +2837,7 @@ sake of simplicity, let’s assume we’re sending from the folder in which
 our data reside, and the name of our genomic leafhopper data file is
 Hoffman_09272024_3.fastq. In that case, you may perform the following
 command, omitting for now the [optionalFlags]:</p>
-<pre><code>## [1] rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+<pre><code>rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
 <p>Your terminal should then request your password. Note that the
 password it requires is not your regular sign-in password for the
 server, but the particular rsync password mentioned above that will be
@@ -2863,7 +2863,7 @@ about what’s going on under the hood, which may enable you to
 troubleshoot your error.</p></li>
 </ol>
 <p>This could look as follows:</p>
-<pre><code>## [1] rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+<pre><code>rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
 <p>You are of course encouraged to explore other flags linked above.</p>
 </div>
 </div>
@@ -2877,10 +2877,10 @@ Project</a>. Please follow the guide there in order to download rsync,
 and reach out to Nick Hoffman if you have any problem with it. If you’re
 not sure whether rsync downloaded properly onto your Windows system, you
 can run the following command in <b>Cygwin Terminal</b>:</p>
-<pre><code>## [1] rsync --version</code></pre>
+<pre><code>rsync --version</code></pre>
 <p>If rsync installed correctly, you should should see an output
 like:</p>
-<pre><code>## [1] rsync  version x.x.x  protocol version xxx</code></pre>
+<pre><code>rsync  version x.x.x  protocol version xxx</code></pre>
 <p>Happy syncing !</p>
 </div>
 
