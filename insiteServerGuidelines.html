@@ -2838,7 +2838,7 @@ I upload?</h1>
 you upload to the server must be in a subfolder of the insiteData
 directory. In general, data uploads should follow this directory
 structure:</p>
-<pre><code>## insiteData &gt; data &gt; [organism] &gt; [theme] &gt; [datatype] &gt; [experiment#]</code></pre>
+<pre><code>insiteData &gt; data &gt; [organism] &gt; [theme] &gt; [datatype] &gt; [experiment#]</code></pre>
 <p>In this template, [experiment#] is an arbitrary index which allows
 for multiple of the same experiment type to be saved. <b>Information on
 what distinguishes different experiment numbers from each other must be
@@ -2846,22 +2846,22 @@ included in your README.</b></p>
 <p>So, if you’ve produced a transcriptome of an aster leafhopper
 population under heat stress, you might put your fastq files in the
 following subfolder:</p>
-<pre><code>## insiteData &gt; data &gt; leafhoppers &gt; theme1 &gt; transcriptome &gt; exp3</code></pre>
+<pre><code>insiteData &gt; data &gt; leafhoppers &gt; theme1 &gt; transcriptome &gt; exp3 </code></pre>
 </div>
 <div id="how-do-i-name-my-files" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> How do I name my
 files?</h1>
 <p>Data files should be named as follows:</p>
-<pre><code>## [lastName]_[dateCreated]_[indexNumber].[fileType]</code></pre>
+<pre><code>[lastName]_[dateCreated]_[indexNumber].[fileType]</code></pre>
 <p>In this template, [experiment#] is an arbitrary index which allows
 for multiple of the same file type to be saved. <b>Information on what
 distinguishes different file index numbers from each other must be
 included in your README.</b></p>
 <p>So, if you’ve produced a transcriptome of an aster leafhopper
 population under heat stress, you might name your file:</p>
-<pre><code>## Hoffman_09272024_2.fastq</code></pre>
+<pre><code>Hoffman_09272024_2.fastq</code></pre>
 <p>README files should be named as follows:</p>
-<pre><code>## [lastName]_[dateCreated]_[experiment#]_README.txt</code></pre>
+<pre><code>[lastName]_[dateCreated]_[experiment#]_README.txt</code></pre>
 <p>Notice that the number in your README file name should correspond to
 the experiment# of the subfolder to which your README corresponds, not
 to the index number of any of the files which your README will describe.

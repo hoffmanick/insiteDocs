@@ -70,6 +70,10 @@ cat(paste0("<style>",
            " > .header-section-number { display: none; } </style>"))
 ```
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment=NA)
+```
+
 # Introduction
 
 This is a guide to uploading files to the INSITE server.
