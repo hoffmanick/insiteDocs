@@ -116,7 +116,7 @@ All READMEs <b>must</b> contain the following information (list adapted from <a 
 * Description of methods for data collection/generation (include links or references to publications or other documentation containing experimental design or protocols used)
 * Description of methods used for data processing (how were data generated from raw)
 * Temperature at which experiment was performed if relevant
-*Description of and links to computational scripts and software (r-code, python, command-line wrappers, etc.), as appropriate
+* Description of and links to computational scripts and software (r-code, python, command-line wrappers, etc.), as appropriate
 
 
 ## Access
