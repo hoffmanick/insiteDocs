@@ -149,7 +149,7 @@ For instance, for <a href="https://www.ncbi.nlm.nih.gov/biosample/docs/packages/
 * local scale environment
 * environmental medium
 * geolocation name
-* isolate growth conditions
+* isolation and growth conditions
 * latitude and longitude, 
 
 as well as at least one of 
