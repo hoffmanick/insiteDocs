@@ -80,7 +80,7 @@ This guide will provide instructions on writing a README for data produced by IN
 
 # When do I write a README?
 
-If you are producing any raw data with or without downstream products (final datasets, manuscripts), you should be uploading those data and any downstream products to the INSITE server. As well, you should be writing a README that provides a rich description of what those data are.
+If you are producing any raw data with or without downstream products (final datasets, manuscripts, etc.), you should be uploading those data and any downstream products to the INSITE server. As well, you should be writing a README that provides a rich description of what those data are.
 
 # What level do I write the README at?
 
@@ -91,7 +91,7 @@ cat(paste("insiteData > data > leafhoppers > theme1 > transcriptome > exp3 "))
 
 ```
 
-And you would name write a README with the following name:
+And you would write a README with the following name:
 
 
 ```{r directory-structure5,include=TRUE,echo=FALSE}
@@ -164,4 +164,4 @@ and at least one of
 * host, or
 * lab host.
 
-These metadata values <b>must</b> be findable in your READMEE file. The definitions of these metadata fields can be found on <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">the NCBI MIMARKS page</a>.
+These metadata values <b>must</b> be findable in your README file. The definitions of these metadata fields can be found on the relevant NCBI page. For the min info about a gene marker sequence for a host-associated specimen, that would be <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.
