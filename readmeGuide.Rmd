@@ -91,7 +91,7 @@ cat(paste("insiteData > data > leafhoppers > theme1 > transcriptome > exp3 "))
 
 ```
 
-And you would write a README with the following name:
+And you would write a README to be placed in the same folder with the following name:
 
 
 ```{r directory-structure5,include=TRUE,echo=FALSE}
@@ -99,7 +99,7 @@ cat(paste("[lastName]_[dateCreated]_[experiment#]_README.txt"))
 
 ```
 
-Where experiment# would be replaced with a 3, since this is the third version of your README. This README will provide necessary metadata on your fastq files as well as any downstream data products (e.g., a .csv file that documents differential expression between your heat stressed leafhoppers and a control population) <b>Your README should explain what distinguishes this third version of the transcriptome experiment from others you've performed. </b>
+Where experiment# would be replaced with a 3, since this is the README describing the files produced for your third experiment. This README will provide necessary metadata on your fastq files as well as any downstream data products (e.g., a .csv file that documents differential expression between your heat stressed leafhoppers and a control population) <b>Your README should explain what distinguishes this third version of the transcriptome experiment from others you've performed. </b>
 
 # What information do I include in my README?
 
