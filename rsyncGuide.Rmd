@@ -180,4 +180,19 @@ cat(paste("rsync  version x.x.x  protocol version xxx"))
 ```
 
 
+To navigate in the Cygwin Terminal to where your files are located, you'll need to add
+
+``` {r cyg, include=TRUE,echo=FALSE}
+
+cat(paste("/cygdrive/c/"))
+```
+
+in front of your regular directory. So to navigate to my documents folder in Cygwin Terminal, I write
+
+``` {r cyg-2, include=TRUE, echo=FALSE}
+
+cat(paste("cd /cygdrive/c/Users/Nick/Documents"))
+```
+
+and I can rsync my files from there.
 Happy syncing !

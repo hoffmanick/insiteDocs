@@ -2889,7 +2889,13 @@ can run the following command in <b>Cygwin Terminal</b>:</p>
 <p>If rsync installed correctly, you should should see an output
 like:</p>
 <pre><code>rsync  version x.x.x  protocol version xxx</code></pre>
-<p>Happy syncing !</p>
+<p>To navigate in the Cygwin Terminal to where your files are located,
+you’ll need to add</p>
+<pre><code>/cygdrive/c/</code></pre>
+<p>in front of your regular directory. So to navigate to my documents
+folder in Cygwin Terminal, I write</p>
+<pre><code>cd /cygdrive/c/Users/Nick/Documents</code></pre>
+<p>and I can rsync my files from there. Happy syncing !</p>
 </div>
 
 
