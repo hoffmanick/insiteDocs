@@ -78,6 +78,10 @@ knitr::opts_chunk$set(echo = TRUE,comment=NA)
 
 This guide will provide instructions on writing a README for data produced by INSITE-affiliated researchers.
 
+# Why should I write a README?
+
+INSITE is a collaborative project. In order for your collaborators to use your data easily and effectively, they will need to know the metadata which you provide in your README file. As well, writing a README is a requirement for upload to the INSITE server. Uploading to the server increases the security of your hard-won data. If something happens to your local copy of your data, you can retrieve it from the backup copy on the server. Lastly, journals often require that bioinformatic data be uploaded to specialist repositories like GenBank prior to publishing on those data. In turn, those specialist repositories require metadata which you provide in your README. Record the information as soon as you can, while it is still fresh in your memory.
+
 # When do I write a README?
 
 If you are producing any raw data with or without downstream products (final datasets, manuscripts, etc.), you should be uploading those data and any downstream products to the INSITE server. As well, you should be writing a README that provides a rich description of what those data are.
@@ -87,7 +91,7 @@ If you are producing any raw data with or without downstream products (final dat
 The README should be written at the level of the experiment, not the individual file. So, for instance, if you've produced a transcriptome of an aster leafhopper population under heat stress, and it's the third version of this experiment that you've run, you might put your fastq files in the following subfolder:
 
 ```{r directory-structure,include=TRUE,echo=FALSE}
-cat(paste("insiteData > data > leafhoppers > theme1 > transcriptome > exp3 "))
+cat(paste("insiteData / data / leafhoppers / theme1 / transcriptome / exp3 "))
 
 ```
 
@@ -165,3 +169,7 @@ and at least one of
 * lab host.
 
 These metadata values <b>must</b> be findable in your README file. The definitions of these metadata fields can be found on the relevant NCBI page. For the min info about a gene marker sequence for a host-associated specimen, that would be <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.
+
+# READMEs for collections of scripts
+
+If you have a collection of coding scripts - in a GitHub repository, for instance - you may benefit from GitHub's guidance on writing READMEs, which you can find <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes" target="_blank" > here</a>.

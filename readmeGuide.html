@@ -2787,8 +2787,24 @@ margin: auto;
 <p>This guide will provide instructions on writing a README for data
 produced by INSITE-affiliated researchers.</p>
 </div>
-<div id="when-do-i-write-a-readme" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> When do I write a
+<div id="why-should-i-write-a-readme" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Why should I write a
+README?</h1>
+<p>INSITE is a collaborative project. In order for your collaborators to
+use your data easily and effectively, they will need to know the
+metadata which you provide in your README file. As well, writing a
+README is a requirement for upload to the INSITE server. Uploading to
+the server increases the security of your hard-won data. If something
+happens to your local copy of your data, you can retrieve it from the
+backup copy on the server. Lastly, journals often require that
+bioinformatic data be uploaded to specialist repositories like GenBank
+prior to publishing on those data. In turn, those specialist
+repositories require metadata which you provide in your README. Record
+the information as soon as you can, while it is still fresh in your
+memory.</p>
+</div>
+<div id="when-do-i-write-a-readme" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> When do I write a
 README?</h1>
 <p>If you are producing any raw data with or without downstream products
 (final datasets, manuscripts, etc.), you should be uploading those data
@@ -2796,15 +2812,15 @@ and any downstream products to the INSITE server. As well, you should be
 writing a README that provides a rich description of what those data
 are.</p>
 </div>
-<div id="what-level-do-i-write-the-readme-at" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> What level do I write
+<div id="what-level-do-i-write-the-readme-at" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> What level do I write
 the README at?</h1>
 <p>The README should be written at the level of the experiment, not the
 individual file. So, for instance, if you’ve produced a transcriptome of
 an aster leafhopper population under heat stress, and it’s the third
 version of this experiment that you’ve run, you might put your fastq
 files in the following subfolder:</p>
-<pre><code>insiteData &gt; data &gt; leafhoppers &gt; theme1 &gt; transcriptome &gt; exp3 </code></pre>
+<pre><code>insiteData / data / leafhoppers / theme1 / transcriptome / exp3 </code></pre>
 <p>And you would write a README to be placed in the same folder with the
 following name:</p>
 <pre><code>[lastName]_[dateCreated]_[experiment#]_README.txt</code></pre>
@@ -2817,14 +2833,14 @@ control population) <b>Your README should explain what distinguishes
 this third version of the transcriptome experiment from others you’ve
 performed. </b></p>
 </div>
-<div id="what-information-do-i-include-in-my-readme" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> What information do I
+<div id="what-information-do-i-include-in-my-readme" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> What information do I
 include in my README?</h1>
 <p>All READMEs <b>must</b> contain the following information (list
 adapted from
 <a href="https://data.research.cornell.edu/data-management/sharing/readme/" target="_blank">here</a>).</p>
-<div id="general" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> General</h2>
+<div id="general" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> General</h2>
 <ul>
 <li>Dataset Title</li>
 <li>Name/institution/address/email information for person responsible
@@ -2833,8 +2849,8 @@ for collecting the data</li>
 <li>Information about geographic location of data collection</li>
 </ul>
 </div>
-<div id="methodological-information" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Methodological
+<div id="methodological-information" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Methodological
 information</h2>
 <ul>
 <li>Description of methods for data collection/generation (include links
@@ -2847,14 +2863,14 @@ generated from raw)</li>
 (r-code, python, command-line wrappers, etc.), as appropriate</li>
 </ul>
 </div>
-<div id="access" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Access</h2>
+<div id="access" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Access</h2>
 <ul>
 <li>Any licenses or restrictions placed on data</li>
 </ul>
 </div>
-<div id="for-each-file" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> For each file:</h2>
+<div id="for-each-file" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> For each file:</h2>
 <ul>
 <li>For each filename, short description of what data it contains</li>
 <li>Relationship among the files</li>
@@ -2862,8 +2878,8 @@ generated from raw)</li>
 <li>Meaning of the index number in file name - what distinguishes this
 file from a similarly named file?</li>
 </ul>
-<div id="data-specific-information" class="section level3" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Data-specific
+<div id="data-specific-information" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Data-specific
 information</h3>
 <ul>
 <li>Variable list, including full names and definitions (spell out
@@ -2876,8 +2892,8 @@ compromised data</li>
 </div>
 </div>
 </div>
-<div id="extra-requirements-for-sequencing-data" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Extra requirements for
+<div id="extra-requirements-for-sequencing-data" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Extra requirements for
 sequencing data</h1>
 <p>Repositories of sequencing data like GenBank have specific metadata
 requirements for upload. If you are uploading sequencing data to the
@@ -2917,6 +2933,15 @@ The definitions of these metadata fields can be found on the relevant
 NCBI page. For the min info about a gene marker sequence for a
 host-associated specimen, that would be
 <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.</p>
+</div>
+<div id="readmes-for-collections-of-scripts" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> READMEs for collections
+of scripts</h1>
+<p>If you have a collection of coding scripts - in a GitHub repository,
+for instance - you may benefit from GitHub’s guidance on writing
+READMEs, which you can find
+<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes" target="_blank">
+here</a>.</p>
 </div>
 
 
