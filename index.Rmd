@@ -66,8 +66,8 @@ Here you can find links to all documentation for INSITE's data management practi
 
 <h1>Data Management Guides</h1>  
     
-* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/insiteserverguidelines.html">Server Guidelines</a>
-* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/readmeguide.html">README Guide</a>
-* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/rsyncguide.html">rsync Guide</a>
-* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/codingbestpractices.html">Coding Best Practices</a>
+* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/insiteServerGuidelines.html">Server Guidelines</a>
+* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/readmeGuide.html">README Guide</a>
+* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/rsyncGuide.html">rsync Guide</a>
+* <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/codingBestPractices.html">Coding Best Practices</a>
 </div>
