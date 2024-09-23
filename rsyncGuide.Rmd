@@ -77,7 +77,7 @@ knitr::opts_chunk$set(echo = TRUE,comment=NA)
 
 # Introduction
 
-This guide is intended to provide some minimum information on the software tool rsync for INSITE's data producers, so they can send large files remotely to our file server. This guide is a quick start. If you would like more information about advanced rsync use, please consult this <a href="https://linux.die.net/man/1/rsync" target="_blank">page</a>.
+This guide is intended to provide some minimum information on the software tool rsync for INSITE's data producers, so they can send large files remotely to our file server. This guide is a quick start. If you would like more information about advanced rsync use, please consult this <a href="https://vamsipenmetsa.medium.com/efficient-syncing-with-rsync-command-2b5a9dd9e13c" target="_blank">page</a>.
 
 # What is rsync?
 
@@ -85,27 +85,61 @@ rsync (<i>remote sync</i>) is a software tool for transferring and synchronizing
 
 # How do I use rsync?
 
-rsync commands must be input into a command-line interface (CLI) like Terminal or Command Prompt. rsync involves syncing files between two different computer systems, which must both be rsync-compatible in order for the operation to succeed. The INSITE server is rsync-compatible, and if the computer from which you're transferring files uses a Linx or Mac OS, it should be rsync-compatible too. If you are using a Windows operating system, see below for more information.  
+rsync commands must be input into a command-line interface (CLI) like Terminal or Command Prompt. rsync involves syncing files between two different computer systems, which must both be rsync-compatible in order for the operation to succeed. The INSITE server is rsync-compatible, and if the computer from which you're transferring files uses Linux or Mac operating system, it should be rsync-compatible too. If you are using a Windows operating system, see below for more information.  
 
 Although the INSITE server is rsync-compatible, by default the rsync functionality is turned off for users. In order to use rsync with the INSITE server, you must reach out to the INSITE data manager, Nick Hoffman, and request rsync permissions. He will provide you with an rsync password which you will need in the course of sending data through rsync to the server.  
 
-To send a file from a local computer to a remote one, the following syntax is appropriate:
+To send a file from a local computer to a remote one, the following syntax is appropriate. (Note that anything in brackets needs to be customized depending on your particular use case.)
 
 ```{r rsync-syntax, include=TRUE,echo=FALSE}
 cat(paste("rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]"))
 ```
 
-In our case, the remote folder to which we will be sending our files is the INSITE server, so we can replace *[pathToRemoteFolder]* with *[Username]@[ServerIPAddress]::[folder]*. The server IP address is 169.236.184.28, and our shared folder for INSITE data is insiteData/data/... . Your username is specific to you. The rsync syntax may then look like:
+In our case, the remote folder to which we will be sending our files is the INSITE server, so we can replace 
+
+```{r rsync-example, include=TRUE,echo=FALSE} 
+cat(paste("[pathToRemoteFolder]"))
+```
+
+with 
+
+```{r rsync-example2, include=TRUE,echo=FALSE} 
+cat(paste("[Username]@[ServerIPAddress]::[folder]."))
+```
+
+The server IP address is available upon request from Nick Hoffman, and our shared folder for INSITE data is  
+
+
+```{r rsync-example6, include=TRUE,echo=FALSE} 
+cat(paste("insiteData/data/...."))
+```
+
+
+Your username is specific to you. The rsync syntax may then look like:
 
 ```{r rsync-syntax2,include=TRUE,echo=FALSE}
-cat(paste("rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
+cat(paste("rsync [optionalFlags] [pathToLocalFile] NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/"))
 
 ```
 
-If you're performing your rsync from within the folder in which reside the data you intend to send, then you simply need to replace *[pathToLocalFile]* with the name of your file. If you are performing rsync from a distinct folder, you need to input the path from the folder you're currently in to the location of your file. For the sake of simplicity, let's assume we're sending from the folder in which our data reside, and the name of our genomic leafhopper data file is Hoffman_09272024_3.fastq. In that case, you may perform the following command, omitting for now the [optionalFlags]: 
+If you're performing your rsync from within the folder in which reside the data you intend to send, then you simply need to replace
+
+```{r rsync-exampl3, include=TRUE,echo=FALSE}
+
+cat(paste('[pathToLocalFile]' ))
+```
+
+with the name of your file. If you are performing rsync from a distinct folder, you need to input the path from the folder you're currently in to the location of your file. For the sake of simplicity, let's assume we're sending from the folder in which our data reside, and the name of our genomic leafhopper data file is 
+
+```{r rsync-exampl4, include=TRUE,echo=FALSE}
+
+cat(paste('Hoffman_09272024_3.fastq.' ))
+```
+
+In that case, you may perform the following command, omitting for now the [optionalFlags]: 
 
 ```{r rsync-syntax3, include=TRUE,echo=FALSE}
-cat(paste("rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
+cat(paste("rsync Hoffman_09272024_3.fastq NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/"))
 ```
 
 Your terminal should then request your password. Note that the password it requires is not your regular sign-in password for the server, but the particular rsync password mentioned above that will be provided to you by Nick Hoffman.
@@ -125,10 +159,10 @@ Here are some flags we recommend using in your rsync command.
 This could look as follows:
 
 ```{r rsync-syntax6, include=TRUE,echo=FALSE}
-cat(paste("rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/"))
+cat(paste("rsync -avz Hoffman_09272024_3.fastq NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/"))
 ```
 
-You are of course encouraged to explore other flags linked above.
+You are of course encouraged to explore other flags linked above in the advanced user guide.
 
 # What if I'm on Windows?
 

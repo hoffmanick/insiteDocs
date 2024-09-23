@@ -2789,7 +2789,7 @@ software tool rsync for INSITE’s data producers, so they can send large
 files remotely to our file server. This guide is a quick start. If you
 would like more information about advanced rsync use, please consult
 this
-<a href="https://linux.die.net/man/1/rsync" target="_blank">page</a>.</p>
+<a href="https://vamsipenmetsa.medium.com/efficient-syncing-with-rsync-command-2b5a9dd9e13c" target="_blank">page</a>.</p>
 </div>
 <div id="what-is-rsync" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> What is rsync?</h1>
@@ -2809,9 +2809,9 @@ rsync?</h1>
 Terminal or Command Prompt. rsync involves syncing files between two
 different computer systems, which must both be rsync-compatible in order
 for the operation to succeed. The INSITE server is rsync-compatible, and
-if the computer from which you’re transferring files uses a Linx or Mac
-OS, it should be rsync-compatible too. If you are using a Windows
-operating system, see below for more information.</p>
+if the computer from which you’re transferring files uses Linux or Mac
+operating system, it should be rsync-compatible too. If you are using a
+Windows operating system, see below for more information.</p>
 <p>Although the INSITE server is rsync-compatible, by default the rsync
 functionality is turned off for users. In order to use rsync with the
 INSITE server, you must reach out to the INSITE data manager, Nick
@@ -2819,25 +2819,32 @@ Hoffman, and request rsync permissions. He will provide you with an
 rsync password which you will need in the course of sending data through
 rsync to the server.</p>
 <p>To send a file from a local computer to a remote one, the following
-syntax is appropriate:</p>
+syntax is appropriate. (Note that anything in brackets needs to be
+customized depending on your particular use case.)</p>
 <pre><code>rsync [optionalFlags] [pathToLocalFile] [pathToRemoteFolder]</code></pre>
 <p>In our case, the remote folder to which we will be sending our files
-is the INSITE server, so we can replace <em>[pathToRemoteFolder]</em>
-with <em>[Username]@[ServerIPAddress]::[folder]</em>. The server IP
-address is 169.236.184.28, and our shared folder for INSITE data is
-insiteData/data/… . Your username is specific to you. The rsync syntax
-may then look like:</p>
-<pre><code>rsync [optionalFlags] [pathToLocalFile] NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+is the INSITE server, so we can replace</p>
+<pre><code>[pathToRemoteFolder]</code></pre>
+<p>with</p>
+<pre><code>[Username]@[ServerIPAddress]::[folder].</code></pre>
+<p>The server IP address is available upon request from Nick Hoffman,
+and our shared folder for INSITE data is</p>
+<pre><code>insiteData/data/....</code></pre>
+<p>Your username is specific to you. The rsync syntax may then look
+like:</p>
+<pre><code>rsync [optionalFlags] [pathToLocalFile] NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
 <p>If you’re performing your rsync from within the folder in which
-reside the data you intend to send, then you simply need to replace
-<em>[pathToLocalFile]</em> with the name of your file. If you are
-performing rsync from a distinct folder, you need to input the path from
-the folder you’re currently in to the location of your file. For the
-sake of simplicity, let’s assume we’re sending from the folder in which
-our data reside, and the name of our genomic leafhopper data file is
-Hoffman_09272024_3.fastq. In that case, you may perform the following
-command, omitting for now the [optionalFlags]:</p>
-<pre><code>rsync Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+reside the data you intend to send, then you simply need to replace</p>
+<pre><code>[pathToLocalFile]</code></pre>
+<p>with the name of your file. If you are performing rsync from a
+distinct folder, you need to input the path from the folder you’re
+currently in to the location of your file. For the sake of simplicity,
+let’s assume we’re sending from the folder in which our data reside, and
+the name of our genomic leafhopper data file is</p>
+<pre><code>Hoffman_09272024_3.fastq.</code></pre>
+<p>In that case, you may perform the following command, omitting for now
+the [optionalFlags]:</p>
+<pre><code>rsync Hoffman_09272024_3.fastq NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
 <p>Your terminal should then request your password. Note that the
 password it requires is not your regular sign-in password for the
 server, but the particular rsync password mentioned above that will be
@@ -2863,8 +2870,9 @@ about what’s going on under the hood, which may enable you to
 troubleshoot your error.</p></li>
 </ol>
 <p>This could look as follows:</p>
-<pre><code>rsync -avz Hoffman_09272024_3.fastq NickHoffman@169.236.184.28::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
-<p>You are of course encouraged to explore other flags linked above.</p>
+<pre><code>rsync -avz Hoffman_09272024_3.fastq NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/</code></pre>
+<p>You are of course encouraged to explore other flags linked above in
+the advanced user guide.</p>
 </div>
 </div>
 <div id="what-if-im-on-windows" class="section level1" number="4">
