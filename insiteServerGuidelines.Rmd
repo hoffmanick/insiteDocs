@@ -80,17 +80,17 @@ This is a guide to uploading files to the INSITE server.
 
 # What do I upload to the server?
 
-* raw data
-* detailed materials and methods
-* final datasets
-* unpublished data at end of appointment
-* manuscripts once ready for submission
+* Raw data
+* Detailed materials and methods
+* Final datasets
+* Unpublished data at end of appointment
+* Manuscripts once ready for submission
 
 # How do I upload to the server?
 
 ## Through GUI
 
-Log into website through this <a href="insite-bii.quickconnect.to" target="_blank">URL</a> and supply your credentials. 
+Log into website through this <a href="https://insite-bii.quickconnect.to" target="_blank">URL</a> and supply your credentials. 
 
 1. Click on “File Station” icon.
 2. Navigate to “insiteData” folder. Do not use home folder.
@@ -104,14 +104,22 @@ If you have large files, it may be easier to upload your data through rsync. Ple
 
 # When do I upload to the server?
 
-Upload your data regularly. Do not wait for your final product to be ready to upload everything. If you are producing raw data, you should be uploading it. If you have any questions about getting started, please reach out to INSITE data manager Nick Hoffman.
+Upload your data regularly. Do not wait for your final product to be ready to upload everything. If you are producing raw data, you should be uploading it. Uploading to the server increases the security of your hard-won data. If something happens to your local copy of your data, you can retrieve it from the backup copy on the server. Record the information as soon as you can, while it is still fresh in your memory. If you have any questions about getting started, please reach out to INSITE data manager Nick Hoffman.
+
+## Before I upload
+
+Before you upload your data, make sure that 
+
+1. You know the appropriate folder to which you should upload your data (see next section),
+2. You have formatted your files in a way that conforms to INSITE guidelines (see section below), and
+3. You have written a README which conforms to <a target="_blank" href="https://hoffmanick.github.io/insiteDocs/readmeGuide.html">INSITE README guidelines</a>.
 
 # Where in the server do I upload?
 
-The shared data folder on the INSITE server is insiteData. Anything you upload to the server must be in a subfolder of the insiteData directory. In general, data uploads should follow this directory structure:
+The shared data folder on the INSITE server is insiteData. Anything you upload to the server must be in a subfolder of the insiteData directory. In general, data uploads should follow this directory structure. (Note that anything in brackets needs to be customized to your particular use case.)
 
 ```{r directory-structure,include=TRUE,echo=FALSE}
-cat(paste("insiteData > data > [organism] > [theme] > [datatype] > [experiment#]"))
+cat(paste("insiteData / data / [organism] / [theme] / [datatype] / [experiment#]"))
 
 ```
 
@@ -120,7 +128,7 @@ In this template, [experiment#] is an arbitrary index which allows for multiple 
 So, if you've produced a transcriptome of an aster leafhopper population under heat stress, you might put your fastq files in the following subfolder:
 
 ```{r directory-structure2,include=TRUE,echo=FALSE}
-cat(paste("insiteData > data > leafhoppers > theme1 > transcriptome > exp3 "))
+cat(paste("insiteData / data / leafhoppers / theme1 / transcriptome / exp3 "))
 
 ```
 
@@ -151,7 +159,7 @@ cat(paste("[lastName]_[dateCreated]_[experiment#]_README.txt"))
 
 ```
 
-Notice that the number in your README file name should correspond to the experiment# of the subfolder to which your README corresponds, not to the index number of any of the files which your README will describe. Markdown file format (.md) is also an appropriate filetype for your README.
+Notice that the number in your README file name should correspond to the experiment# of the subfolder to which your README corresponds, not to the index number of any of the files which your README will describe. Markdown file format (.md) is also an appropriate filetype for your README. To learn about writing in markdown, please consult this <a href="https://medium.com/@itsjzt/beginner-guide-to-markdown-229adce30074" target="_blank">guide</a>.
 
 # What is the minimum information which I should record in a README?
 

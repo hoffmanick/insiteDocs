@@ -2790,11 +2790,11 @@ margin: auto;
 <h1><span class="header-section-number">2</span> What do I upload to the
 server?</h1>
 <ul>
-<li>raw data</li>
-<li>detailed materials and methods</li>
-<li>final datasets</li>
-<li>unpublished data at end of appointment</li>
-<li>manuscripts once ready for submission</li>
+<li>Raw data</li>
+<li>Detailed materials and methods</li>
+<li>Final datasets</li>
+<li>Unpublished data at end of appointment</li>
+<li>Manuscripts once ready for submission</li>
 </ul>
 </div>
 <div id="how-do-i-upload-to-the-server" class="section level1" number="3">
@@ -2803,8 +2803,8 @@ server?</h1>
 <div id="through-gui" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Through GUI</h2>
 <p>Log into website through this
-<a href="insite-bii.quickconnect.to" target="_blank">URL</a> and supply
-your credentials.</p>
+<a href="https://insite-bii.quickconnect.to" target="_blank">URL</a> and
+supply your credentials.</p>
 <ol style="list-style-type: decimal">
 <li>Click on “File Station” icon.</li>
 <li>Navigate to “insiteData” folder. Do not use home folder.</li>
@@ -2828,8 +2828,25 @@ guide</a> on using rsync for the INSITE server.</p>
 server?</h1>
 <p>Upload your data regularly. Do not wait for your final product to be
 ready to upload everything. If you are producing raw data, you should be
-uploading it. If you have any questions about getting started, please
-reach out to INSITE data manager Nick Hoffman.</p>
+uploading it. Uploading to the server increases the security of your
+hard-won data. If something happens to your local copy of your data, you
+can retrieve it from the backup copy on the server. Record the
+information as soon as you can, while it is still fresh in your memory.
+If you have any questions about getting started, please reach out to
+INSITE data manager Nick Hoffman.</p>
+<div id="before-i-upload" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Before I upload</h2>
+<p>Before you upload your data, make sure that</p>
+<ol style="list-style-type: decimal">
+<li>You know the appropriate folder to which you should upload your data
+(see next section),</li>
+<li>You have formatted your files in a way that conforms to INSITE
+guidelines (see section below), and</li>
+<li>You have written a README which conforms to
+<a target="_blank" href="https://hoffmanick.github.io/insiteDocs/readmeGuide.html">INSITE
+README guidelines</a>.</li>
+</ol>
+</div>
 </div>
 <div id="where-in-the-server-do-i-upload" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Where in the server do
@@ -2837,8 +2854,9 @@ I upload?</h1>
 <p>The shared data folder on the INSITE server is insiteData. Anything
 you upload to the server must be in a subfolder of the insiteData
 directory. In general, data uploads should follow this directory
-structure:</p>
-<pre><code>insiteData &gt; data &gt; [organism] &gt; [theme] &gt; [datatype] &gt; [experiment#]</code></pre>
+structure. (Note that anything in brackets needs to be customized to
+your particular use case.)</p>
+<pre><code>insiteData / data / [organism] / [theme] / [datatype] / [experiment#]</code></pre>
 <p>In this template, [experiment#] is an arbitrary index which allows
 for multiple of the same experiment type to be saved. <b>Information on
 what distinguishes different experiment numbers from each other must be
@@ -2846,7 +2864,7 @@ included in your README.</b></p>
 <p>So, if you’ve produced a transcriptome of an aster leafhopper
 population under heat stress, you might put your fastq files in the
 following subfolder:</p>
-<pre><code>insiteData &gt; data &gt; leafhoppers &gt; theme1 &gt; transcriptome &gt; exp3 </code></pre>
+<pre><code>insiteData / data / leafhoppers / theme1 / transcriptome / exp3 </code></pre>
 </div>
 <div id="how-do-i-name-my-files" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> How do I name my
@@ -2866,7 +2884,8 @@ population under heat stress, you might name your file:</p>
 the experiment# of the subfolder to which your README corresponds, not
 to the index number of any of the files which your README will describe.
 Markdown file format (.md) is also an appropriate filetype for your
-README.</p>
+README. To learn about writing in markdown, please consult this
+<a href="https://medium.com/@itsjzt/beginner-guide-to-markdown-229adce30074" target="_blank">guide</a>.</p>
 </div>
 <div id="what-is-the-minimum-information-which-i-should-record-in-a-readme" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> What is the minimum
