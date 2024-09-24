@@ -84,7 +84,7 @@ INSITE is a collaborative project. In order to facilitate sharing of scripts and
 
 # Write to be understood
 
-## Variable Names
+## Variable names
 
 1. Variable names should be meaningful. It may take a few extra letters to spell out <mark>alf_genome</mark>, rather than <mark>ag</mark>, but the increase in transparency is worth it.
 
