@@ -54,14 +54,20 @@ table tr th :last-child, table tr td :last-child {
 .html-widget {
     margin: auto;
 }
+
+div #header {
+    position: relative;
+    left: 15vw;
+
+}
 </style>
 
 ---
-<div style="position:relative; float:left; left: -300px; z-index: 99; width:200px;height: 500px;">
+<div style="position:relative; float:left; left: 2vw; z-index: 99; width:11vw;height: 500px;">
 <img src="images/insiteLogo.png" >  
 </div>
 
-<div style="position:relative; left: -200px; z-index: 99;">
+<div style="position:relative; left: 4vw; z-index: 99;">
 Here you can find links to all documentation for INSITE's data management practices. If you have any questions, please contact INSITE data manager Nick Hoffman at nicholashoffman@ucmerced.edu.
 
 <h1>Data Management Guides</h1>  
