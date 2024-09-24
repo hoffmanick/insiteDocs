@@ -194,5 +194,14 @@ in front of your regular directory. So to navigate to my documents folder in Cyg
 cat(paste("cd /cygdrive/c/Users/Nick/Documents"))
 ```
 
+Lastly, because Synology software enforces a stricter set of permissions with respect to Windows/Cygwin than with other operating systems, you'll need to write directly to your target file, rather than renaming a temporary file. To achieve this, use the *--inplace* flag. For example:
+
+
+```{r rsync-syntax100, include=TRUE,echo=FALSE}
+cat(paste("rsync -avz --inplace Hoffman_09272024_3.fastq NickHoffman@[ServerIPAddress]::insiteData/data/leafhopper/theme2/genome/exp5/"))
+```
+
+
+
 and I can rsync my files from there.
 Happy syncing !
