@@ -112,12 +112,14 @@ All READMEs <b>must</b> contain the following information (list adapted from <a 
 ## General
 * Dataset Title
 * Name/institution/address/email information for person responsible for collecting the data
+* List of files described by your README
 * Date of data collection (single date or range)
 * Information about geographic location of data collection
 
 ## Methodological information
 
 * Description of methods for data collection/generation (include links or references to publications or other documentation containing experimental design or protocols used)
+* Name of the species/strain being investigated (e.g., Aiptasia-CC7-Endo)
 * Description of methods used for data processing (how were data generated from raw)
 * Temperature at which experiment was performed if relevant
 * Description of and links to computational scripts and software (r-code, python, command-line wrappers, etc.), as appropriate
@@ -142,9 +144,23 @@ All READMEs <b>must</b> contain the following information (list adapted from <a 
 
 # Extra requirements for sequencing data
 
-Repositories of sequencing data like GenBank have specific metadata requirements for upload. If you are uploading sequencing data to the INSITE server, you must find the <a target="_blank" href="https://ncbi.nlm.nih.gov/biosample/docs/packages/">relevant metadata specification</a> from NCBI and ensure that you have included all mandatory metadata fields from that list.
+Repositories of sequencing data like GenBank have specific metadata requirements for upload. If you are uploading sequencing data to the INSITE server, you must find the <a target="_blank" href="https://ncbi.nlm.nih.gov/biosample/docs/packages/">relevant metadata specification</a> from NCBI and upload a copy of the relevant spreadsheet (downloadable from NCBI) with all the mandatory fields filled in. This spreadsheet should be named as follows:
 
-For instance, for <a href="https://www.ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.5.0/" target="_blank">marker gene sequence from a specimen associated with a host</a>, NCBI requires:
+
+```{r directory-structure3,include=TRUE,echo=FALSE}
+cat(paste("[lastName]_[dateCreated]_[experiment#]_[minInfoStandard].csv"))
+
+```
+
+For instance, if you're using the MIMARKS standard, you might name this file
+
+```{r directory-structure4,include=TRUE,echo=FALSE}
+cat(paste("Hoffman_09272024_3_MIMARKS.csv"))
+
+```
+
+
+<a href="https://www.ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.5.0/" target="_blank">MIMARKS</a> as specified by NCBI has the following requirements:
 
 * sample name
 * organism
@@ -168,7 +184,7 @@ and at least one of
 * host, or
 * lab host.
 
-These metadata values <b>must</b> be findable in your README file. The definitions of these metadata fields can be found on the relevant NCBI page. For the min info about a gene marker sequence for a host-associated specimen, that would be <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.
+These metadata values <b>must</b> be findable in a spreadsheet (.csv file) that you upload along with your README. The definitions of these metadata fields can be found on the relevant NCBI page. For MIMARKS, that would be <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.
 
 # READMEs for collections of scripts
 

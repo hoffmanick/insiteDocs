@@ -2845,6 +2845,7 @@ adapted from
 <li>Dataset Title</li>
 <li>Name/institution/address/email information for person responsible
 for collecting the data</li>
+<li>List of files described by your README</li>
 <li>Date of data collection (single date or range)</li>
 <li>Information about geographic location of data collection</li>
 </ul>
@@ -2856,6 +2857,8 @@ information</h2>
 <li>Description of methods for data collection/generation (include links
 or references to publications or other documentation containing
 experimental design or protocols used)</li>
+<li>Name of the species/strain being investigated (e.g.,
+Aiptasia-CC7-Endo)</li>
 <li>Description of methods used for data processing (how were data
 generated from raw)</li>
 <li>Temperature at which experiment was performed if relevant</li>
@@ -2899,12 +2902,15 @@ sequencing data</h1>
 requirements for upload. If you are uploading sequencing data to the
 INSITE server, you must find the
 <a target="_blank" href="https://ncbi.nlm.nih.gov/biosample/docs/packages/">relevant
-metadata specification</a> from NCBI and ensure that you have included
-all mandatory metadata fields from that list.</p>
-<p>For instance, for
-<a href="https://www.ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.5.0/" target="_blank">marker
-gene sequence from a specimen associated with a host</a>, NCBI
-requires:</p>
+metadata specification</a> from NCBI and upload a copy of the relevant
+spreadsheet (downloadable from NCBI) with all the mandatory fields
+filled in. This spreadsheet should be named as follows:</p>
+<pre><code>[lastName]_[dateCreated]_[experiment#]_[minInfoStandard].csv</code></pre>
+<p>For instance, if you’re using the MIMARKS standard, you might name
+this file</p>
+<pre><code>Hoffman_09272024_3_MIMARKS.csv</code></pre>
+<p><a href="https://www.ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.5.0/" target="_blank">MIMARKS</a>
+as specified by NCBI has the following requirements:</p>
 <ul>
 <li>sample name</li>
 <li>organism</li>
@@ -2928,10 +2934,10 @@ requires:</p>
 <li>host, or</li>
 <li>lab host.</li>
 </ul>
-<p>These metadata values <b>must</b> be findable in your README file.
-The definitions of these metadata fields can be found on the relevant
-NCBI page. For the min info about a gene marker sequence for a
-host-associated specimen, that would be
+<p>These metadata values <b>must</b> be findable in a spreadsheet (.csv
+file) that you upload along with your README. The definitions of these
+metadata fields can be found on the relevant NCBI page. For MIMARKS,
+that would be
 <a href="https://ncbi.nlm.nih.gov/biosample/docs/packages/MIMARKS.specimen.host-associated.6.0/" target="_blank">here</a>.</p>
 </div>
 <div id="readmes-for-collections-of-scripts" class="section level1" number="7">
